@@ -1,3 +1,7 @@
+import { config as initEnv } from 'dotenv';
+
+initEnv();
+
 export const config = {
-  mongoConnectionString: 'mongodb://localhost/nest',
+  mongoConnectionString: process.env.MONGODB_URI,
 };
